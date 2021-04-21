@@ -70,10 +70,13 @@ for ann_idx in range(0, 5000):
             pred = exe.run(parsed_pg, debug=False)
             mypred = myexe.run(parsed_pg, debug=False)
             ans = q['answer']
+            # if open(ann_path).read() != open(my_ann_path).read():
+            #     pred = ans
             # if ans == mypred and pred != mypred:
             #     print('GOOD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
             # if ans == pred and pred != mypred:
-            #     print('BAD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
+                # print(parsed_pg, mysim.in_out, sim.in_out)
+                # print('BAD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
             if pred == ans:
                 correct_desc += 1
                 correct += 1
@@ -92,6 +95,8 @@ for ann_idx in range(0, 5000):
             mypred = myexe.run(full_pg, debug=False)
             pred = pred_map[pred]
             mypred = pred_map[mypred]
+            # if open(ann_path).read() != open(my_ann_path).read():
+            #     pred = ans
             # if ans == mypred and pred != mypred:
             #     print('GOOD_' + q['question_type'], ann_idx, q_idx, c_idx, question, c['program'], ans, pred, mypred)
             # if ans == pred and pred != mypred:
