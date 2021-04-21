@@ -3,7 +3,7 @@ import json
 import numpy as np
 
 
-MOVING_V_TH = 0.02  # threshold above which an object is moving
+MOVING_V_TH = 0.1  # threshold above which an object is moving
 DIR_ANGLE_TH = 20  # threshold for allowed angle deviation wrt each directions
 FRAME_DIFF = 5
 

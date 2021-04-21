@@ -75,8 +75,8 @@ for ann_idx in range(0, 5000):
             # if ans == mypred and pred != mypred:
             #     print('GOOD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
             # if ans == pred and pred != mypred:
-                # print(parsed_pg, mysim.in_out, sim.in_out)
-                # print('BAD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
+            #     print(parsed_pg, mysim.in_out, sim.in_out)
+            #     print('BAD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
             if pred == ans:
                 correct_desc += 1
                 correct += 1
