@@ -72,10 +72,11 @@ for ann_idx in range(0, 5000):
             ans = q['answer']
             # if open(ann_path).read() != open(my_ann_path).read():
             #     pred = ans
+            #     print(parsed_pg, mysim.in_out, sim.in_out)
+
             # if ans == mypred and pred != mypred:
             #     print('GOOD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
             # if ans == pred and pred != mypred:
-            #     print(parsed_pg, mysim.in_out, sim.in_out)
             #     print('BAD_' + q['question_type'], ann_idx, q_idx, question, ans, pred, mypred)
             if pred == ans:
                 correct_desc += 1
@@ -97,6 +98,7 @@ for ann_idx in range(0, 5000):
             mypred = pred_map[mypred]
             # if open(ann_path).read() != open(my_ann_path).read():
             #     pred = ans
+
             # if ans == mypred and pred != mypred:
             #     print('GOOD_' + q['question_type'], ann_idx, q_idx, c_idx, question, c['program'], ans, pred, mypred)
             # if ans == pred and pred != mypred:
