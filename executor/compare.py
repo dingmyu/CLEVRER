@@ -18,7 +18,7 @@ args = parser.parse_args()
 
 
 my_motion_dir = 'data/propnet_preds/with_edge_supervision'
-raw_motion_dir = 'data/propnet_preds/with_edge_supervision_bak'
+raw_motion_dir = 'data/propnet_preds/with_edge_supervision_bak'  # (result will be tested)
 
 
 
@@ -157,6 +157,7 @@ print('predictive accuracy per question: %f %%' % (float(correct_pred_per_q) * 1
 print('counterfactual accuracy per option: %f %%' % (float(correct_coun) * 100.0 / total_coun))
 print('counterfactual accuracy per question: %f %%' % (float(correct_coun_per_q) * 100.0 / total_coun_per_q))
 print('============ results ============')
+print(total, total_per_q, total_desc, total_expl, total_expl_per_q, total_pred, total_pred_per_q, total_coun, total_coun_per_q)
 
 output_ann = {
     'total_options': total,
