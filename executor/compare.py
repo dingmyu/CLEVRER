@@ -17,8 +17,8 @@ parser.add_argument('--use_in', default=0, type=int)  # Use interaction network
 args = parser.parse_args()
 
 
-my_motion_dir = 'data/propnet_preds/with_edge_supervision'
-raw_motion_dir = 'data/propnet_preds/with_edge_supervision_bak'  # (result will be tested)
+my_motion_dir = 'data/propnet_preds/with_edge_supervision'  # (new results to be compared)
+raw_motion_dir = 'data/propnet_preds/with_edge_supervision'  # (result will be tested)
 
 
 
@@ -185,3 +185,10 @@ if args.use_in != 0:
     output_file = 'result_in.json'
 with open(output_file, 'w') as fout:
     json.dump(output_ann, fout)
+
+
+# a, b0, b, c0, c, d0, d = 94.0, 98.5, 96.0, 93.5, 87.5, 91.4, 75.6
+# (a * 54990 + b0 * 30697 + c0 * 7114 + d0 * 33051) / 125852.0
+# a, b, c, d = 93.4, 91.9, 91.4, 84.3
+# print((a * 54990 + b * 8488 + c * 3557 + d * 9333) / 76368.0)
+# print((a + b + c + d) / 4)
